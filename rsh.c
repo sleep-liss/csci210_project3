@@ -24,10 +24,6 @@ int isAllowed(const char*cmd) {
 	return 0;
 }
 
-void print_help() {
-	
-}
-
 int main() {
 
     // TODO
