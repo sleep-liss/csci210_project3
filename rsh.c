@@ -77,7 +77,8 @@ int main() {
 	} else if (cmd_index == 11) {
 		printf("The allowed commands are:\n");
 		for (int i = 0; i < N; i++) {
-			printf("5d: 5s\n", i + 1, allowed[i];
+			printf("%d: %s\n", i + 1, allowed[i]);
+		}
 	} else {
 		pid_t pid;
 		int status;
@@ -87,12 +88,12 @@ int main() {
 			if (waitpid(pid, &status, 0) == -1) {
 				perror("-rsh: waitpid failed");
 			} else if (WIFEXITED(status)) {
-				printf("Process exited with status %d\n", WEXITSATUS(status));
+				printf("Process exited with status %d\n", WEXITSTATUS(status));
 			}
 		}
 	}
 
     }
     return 0;
-}
+ }
 
