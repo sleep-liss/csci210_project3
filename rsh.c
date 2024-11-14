@@ -86,10 +86,6 @@ int main() {
 			perror("-rsh: posix_spawnp failed");
 		} else {
 			waitpid(pid, &status,0);
-		//	if (waitpid(pid, &status, 0) == -1) {
-			//	perror("-rsh: waitpid failed");
-			//} else if (WIFEXITED(status)) {
-				//printf("Process exited with status %d\n", WEXITSTATUS(status));
 			}
 		}
 	}
